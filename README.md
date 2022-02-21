@@ -1,20 +1,96 @@
 # Vue 3 + Typescript + Vite + Less + ESLint + SFC
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Vue 3 + Typescript + Vite
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+- PowerShell
 
 ```
 npm create @vitejs/app vue-vite
 ```
 
+## Less
+
+- PowerShell
+
+```
+npm i -D Less
+```
+
+- App.vue
+
+```
+import './assets/styles/app.less';
+```
+
+## ESLint
+
+- PowerShell
+
+```
+npm i -D eslint
+```
+
+- .eslintrc.json
+
+```
+"rules": {
+	"indent": [
+		"error",
+		2,
+		{
+			"SwitchCase": 1
+		}
+	],
+	"linebreak-style": [
+		"error",
+		"unix"
+	],
+	"no-console": [
+		"warn",
+		{
+			"allow": [
+				"warn",
+				"error"
+			]
+		}
+	],
+	"quotes": [
+		"error",
+		"single"
+	],
+	"semi": [
+		"error",
+		"always"
+	]
+}
+```
+
+## CSpell
+
+- PowerShell
+
+```
+npm i -D cspell
+```
+
+- .vscode\settings.json
+
+```
+{
+  "cSpell.words": [
+    "Avenir",
+    "esnext",
+    "linebreak",
+    "singlefile",
+    "vite",
+    "vitejs"
+  ]
+}
+```
+
 ## SFC: Single File Component
+
+- PowerShell
 
 ```
 npm i -D vite-plugin-singlefile
@@ -43,4 +119,18 @@ export default defineConfig({
 		},
 	},
 })
+```
+
+## Removing hash codes from vite packaged files
+
+- vite.config.ts
+
+```
+rollupOptions: {
+	output: {
+		entryFileNames: `assets/[name].js`,
+		chunkFileNames: `assets/[name].js`,
+		assetFileNames: `assets/[name].[ext]`,
+	}
+}
 ```
