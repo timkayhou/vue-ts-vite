@@ -1,4 +1,4 @@
-# Vue 3 + Typescript + Vite + Less + ESLint
+# Vue 3 + Typescript + Vite + Less + ESLint + SFC
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
@@ -12,4 +12,35 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 ```
 npm create @vitejs/app vue-vite
+```
+
+## SFC: Single File Component
+
+```
+npm i -D vite-plugin-singlefile
+```
+
+- vite.config.ts
+
+```
+import { defineConfig } from "vite"
+import vue from "@vitejs/plugin-vue"
+import { viteSingleFile } from "vite-plugin-singlefile"
+
+export default defineConfig({
+	plugins: [vue(), viteSingleFile()],
+	build: {
+		target: "esnext",
+		assetsInlineLimit: 100000000,
+		chunkSizeWarningLimit: 100000000,
+		cssCodeSplit: false,
+		brotliSize: false,
+		rollupOptions: {
+			inlineDynamicImports: true,
+			output: {
+				manualChunks: () => "everything.js",
+			},
+		},
+	},
+})
 ```
