@@ -3,6 +3,8 @@
     "Avenir",
     "esnext",
     "linebreak",
-    "vite"
+    "singlefile",
+    "vite",
+    "vitejs"
   ]
 }
