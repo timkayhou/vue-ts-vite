@@ -5,6 +5,9 @@ import { viteSingleFile } from "vite-plugin-singlefile"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), viteSingleFile()],
+  server: {
+    host: '0.0.0.0'
+  },
   build: {
     target: "esnext",
     assetsInlineLimit: 100000000,
