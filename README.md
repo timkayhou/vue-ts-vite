@@ -146,3 +146,25 @@ export default defineConfig({
 	}
 })
 ```
+
+## Read JSON
+
+- public/app.json
+
+```
+{
+  "msg": "Hello Vue 3 + TypeScript + Vite + Less + ESLint + SFC"
+}
+```
+
+- src/App.vue
+
+```
+<script setup lang="ts">
+import json from '../public/app.json';
+</script>
+
+<template>
+  <HelloWorld :msg="json.msg" />
+</template>
+```
