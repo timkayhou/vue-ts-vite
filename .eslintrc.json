@@ -18,6 +18,10 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {

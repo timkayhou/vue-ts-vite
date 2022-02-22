@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
-import { viteSingleFile } from "vite-plugin-singlefile"
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,7 +9,7 @@ export default defineConfig({
     host: '0.0.0.0'
   },
   build: {
-    target: "esnext",
+    target: 'esnext',
     assetsInlineLimit: 100000000,
     chunkSizeWarningLimit: 100000000,
     cssCodeSplit: false,
@@ -17,11 +17,11 @@ export default defineConfig({
     rollupOptions: {
       inlineDynamicImports: true,
       output: {
-        manualChunks: () => "everything.js",
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`
-      },
-    },
+        manualChunks: () => 'everything.js',
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   }
 })
