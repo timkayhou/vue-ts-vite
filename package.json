@@ -1,4 +1,26 @@
 {
+  "name": "vue-vite",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
+    "preview": "vite preview",
+    "sort-json": "npx sort-package-json \"*.json\" \"*(?!node_modules)/*.json\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "npm run sort-json",
+      "npm run eslint",
+      "git add"
+    ]
+  },
   "dependencies": {
     "vue": "^3.2.31"
   },
@@ -21,25 +43,5 @@
     "vite": "^2.8.4",
     "vite-plugin-singlefile": "^0.6.3",
     "vue-tsc": "^0.31.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "npm run eslint",
-      "git add"
-    ]
-  },
-  "name": "vue-vite",
-  "private": true,
-  "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
-    "dev": "vite",
-    "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
-    "preview": "vite preview"
-  },
-  "version": "0.0.0"
+  }
 }
