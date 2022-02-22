@@ -7,7 +7,7 @@
     "dev": "vite",
     "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
     "preview": "vite preview",
-    "sort-json": "npx sort-package-json \"!(package-lock).json\" \"*(?!node_modules)/*.json\"",
+    "sort-json": "npx sort-package-json \"*.json\" \"*(?!node_modules)/*.json\"",
     "prepare": "husky install"
   },
   "dependencies": {
