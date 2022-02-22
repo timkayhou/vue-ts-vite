@@ -1,4 +1,4 @@
-# Vue 3 + Typescript + Vite + Less + ESLint + SFC
+# Vue 3 + TypeScript + Vite + Less + ESLint + Prettier + husky + lint-staged + Stylelint + commitlint
 
 ## Vue 3 + Typescript + Vite
 
