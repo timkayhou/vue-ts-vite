@@ -1,0 +1,31 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "indentation": "tab",
+    "number-leading-zero": "never",
+    "color-no-invalid-hex": true,
+    "color-hex-case": "upper",
+    "block-no-empty": true,
+    "color-hex-length": "long",
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "v-deep"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "comment-no-empty": true,
+    "value-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "no-empty-first-line": true,
+    "shorthand-property-no-redundant-values": true,
+    "font-family-no-duplicate-names": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "named-grid-areas-no-invalid": true,
+    "function-calc-no-unspaced-operator": true,
+    "function-linear-gradient-no-nonstandard-direction": true
+  }
+}
