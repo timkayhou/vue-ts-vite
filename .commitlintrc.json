@@ -20,40 +20,14 @@
         "test"
       ]
     ],
-    "type-case": [
-      0,
-      "always",
-      "lower-case"
-    ],
     "type-empty": [
-      0,
+      2,
       "never"
-    ],
-    "scope-empty": [
-      0,
-      "never"
-    ],
-    "scope-case": [
-      0,
-      "always",
-      "lower-case"
-    ],
-    "subject-full-stop": [
-      0,
-      "never",
-      [
-        "."
-      ]
-    ],
-    "subject-case": [
-      0,
-      "never",
-      "sentence-case"
     ],
     "header-max-length": [
       0,
       "always",
-      72
+      255
     ]
   }
 }
