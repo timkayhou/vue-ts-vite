@@ -27,8 +27,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
+    "*.{ts,tsx,js,jsx}": [
+      "npm run eslint",
       "git add"
     ]
   },
