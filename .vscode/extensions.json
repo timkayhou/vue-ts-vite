@@ -1,9 +1,10 @@
 {
   "recommendations": [
-    "streetsidesoftware.code-spell-checker",
+    "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "johnsoncodehk.volar",
-    "dbaeumer.vscode-eslint",
+    "redjue.git-commit-plugin",
+    "streetsidesoftware.code-spell-checker",
     "stylelint.vscode-stylelint"
   ]
 }

@@ -4,3 +4,4 @@
 
 npm run sort-json
 npm run eslint
+commitlint -e "$HUSKY_GIT_PARAMS"
