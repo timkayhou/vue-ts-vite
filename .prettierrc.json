@@ -15,5 +15,6 @@
   "tabWidth": 2,
   "trailingCooma": "none",
   "useTabs": false,
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+  "vueIndentSpaces": 2
 }
