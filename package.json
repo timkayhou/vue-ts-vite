@@ -6,9 +6,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite",
     "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
+    "prepare": "husky install",
     "preview": "vite preview",
-    "sort-json": "npx sort-package-json \"*.json\" \"*(?!node_modules)/*.json\"",
-    "prepare": "husky install"
+    "sort-json": "npx sort-package-json \"*.json\" \"*(?!node_modules)/*.json\""
   },
   "dependencies": {
     "vue": "^3.2.31"
