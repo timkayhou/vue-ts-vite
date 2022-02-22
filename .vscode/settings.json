@@ -9,6 +9,7 @@
     "linebreaks",
     "singlefile",
     "Stylelint",
+    "tailwindcss",
     "vite",
     "vitejs"
   ]
