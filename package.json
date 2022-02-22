@@ -1,6 +1,6 @@
 {
-  "name": "vue-vite",
   "version": "0.0.0",
+  "name": "vue-vite",
   "private": true,
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
@@ -9,18 +9,6 @@
     "prepare": "husky install",
     "preview": "vite preview",
     "sort-json": "npx sort-package-json \"(?!package-lock.json)*.json\" \"*(?!node_modules)/*.json\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "npm run sort-json",
-      "npm run eslint",
-      "git add"
-    ]
   },
   "dependencies": {
     "vue": "^3.2.31"
