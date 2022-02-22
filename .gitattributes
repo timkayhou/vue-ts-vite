@@ -1,0 +1,13 @@
+* text=auto
+*.txt text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.svg text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text working-tree-encoding=UTF-16LE-BOM eol=crlf
+*.reg binary
+*.jpg binary
+*.png binary
+*.pdf	-text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
