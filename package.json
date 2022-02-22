@@ -1,13 +1,13 @@
 {
-  "name": "vue-vite",
   "version": "0.0.0",
+  "name": "vue-vite",
   "private": true,
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite",
     "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
     "preview": "vite preview",
-    "sort-json": "npx sort-package-json \"*(?!package-lock).json\" \"*(?!node_modules)/*.json\""
+    "sort-json": "npx sort-package-json \"(?!package-lock.json)*.json\" \"*(?!node_modules)/*.json\""
   },
   "husky": {
     "hooks": {
