@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import '../assets/styles/hello-world.less';
+import '../assets/styles/hello-world.less'
+
 defineProps<{ msg: string }>()
 const count = ref(0)
 </script>
