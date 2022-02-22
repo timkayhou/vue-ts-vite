@@ -178,37 +178,3 @@ import json from '../public/app.json';
   <HelloWorld :msg="json.msg" />
 </template>
 ```
-
-## Error: eslint should be listed in the project's dependencies, not devDependencies
-
-- .eslintrc.json
-
-```
-"import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
-```
-
-## Error: Expected linebreaks to be 'LF' but found 'CRLF' linebreak-style
-
-- .eslintrc.json
-
-```
-eslint linebreak-style: ["error", "windows"]
-```
-
-## Vue Error: "the template root requires exactly one element"
-
-- .eslintrc.json
-
-```
-"extends": ["plugin:vue/vue3-essential",],
-```
-
-## Error: 'defineProps' is not defined.eslintno-undef
-
-- .eslintrc.json
-
-```
-"env": {
-	"vue/setup-compiler-macros": true
-},
-```
