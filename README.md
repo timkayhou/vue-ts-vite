@@ -4,7 +4,7 @@
 
 - PowerShell
 
-```
+```PowerShell
 npm create @vitejs/app vue-vite
 ```
 
@@ -12,13 +12,13 @@ npm create @vitejs/app vue-vite
 
 - PowerShell
 
-```
+```PowerShell
 npm i -D Less
 ```
 
 - App.vue
 
-```
+```Vue
 import './assets/styles/app.less';
 ```
 
@@ -26,42 +26,42 @@ import './assets/styles/app.less';
 
 - PowerShell
 
-```
+```PowerShell
 npm i -D eslint
 ```
 
 - .eslintrc.json
 
-```
+```JSON
 "rules": {
-	"indent": [
-		"error",
-		2,
-		{
-			"SwitchCase": 1
-		}
-	],
-	"linebreak-style": [
-		"error",
-		"unix"
-	],
-	"no-console": [
-		"warn",
-		{
-			"allow": [
-				"warn",
-				"error"
-			]
-		}
-	],
-	"quotes": [
-		"error",
-		"single"
-	],
-	"semi": [
-		"error",
-		"always"
-	]
+ "indent": [
+  "error",
+  2,
+  {
+   "SwitchCase": 1
+  }
+ ],
+ "linebreak-style": [
+  "error",
+  "unix"
+ ],
+ "no-console": [
+  "warn",
+  {
+   "allow": [
+    "warn",
+    "error"
+   ]
+  }
+ ],
+ "quotes": [
+  "error",
+  "single"
+ ],
+ "semi": [
+  "error",
+  "always"
+ ]
 }
 ```
 
@@ -69,13 +69,13 @@ npm i -D eslint
 
 - PowerShell
 
-```
+```PowerShell
 npm i -D cspell
 ```
 
 - .vscode\settings.json
 
-```
+```JSON
 {
   "cSpell.words": [
     "Avenir",
@@ -92,32 +92,32 @@ npm i -D cspell
 
 - PowerShell
 
-```
+```PowerShell
 npm i -D vite-plugin-singlefile
 ```
 
 - vite.config.ts
 
-```
+```TypeScript
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import { viteSingleFile } from "vite-plugin-singlefile"
 
 export default defineConfig({
-	plugins: [vue(), viteSingleFile()],
-	build: {
-		target: "esnext",
-		assetsInlineLimit: 100000000,
-		chunkSizeWarningLimit: 100000000,
-		cssCodeSplit: false,
-		brotliSize: false,
-		rollupOptions: {
-			inlineDynamicImports: true,
-			output: {
-				manualChunks: () => "everything.js",
-			},
-		},
-	},
+ plugins: [vue(), viteSingleFile()],
+ build: {
+  target: "esnext",
+  assetsInlineLimit: 100000000,
+  chunkSizeWarningLimit: 100000000,
+  cssCodeSplit: false,
+  brotliSize: false,
+  rollupOptions: {
+   inlineDynamicImports: true,
+   output: {
+    manualChunks: () => "everything.js",
+   },
+  },
+ },
 })
 ```
 
@@ -125,13 +125,13 @@ export default defineConfig({
 
 - vite.config.ts
 
-```
+```TypeScript
 rollupOptions: {
-	output: {
-		entryFileNames: `assets/[name].js`,
-		chunkFileNames: `assets/[name].js`,
-		assetFileNames: `assets/[name].[ext]`,
-	}
+ output: {
+  entryFileNames: `assets/[name].js`,
+  chunkFileNames: `assets/[name].js`,
+  assetFileNames: `assets/[name].[ext]`,
+ }
 }
 ```
 
@@ -139,7 +139,7 @@ rollupOptions: {
 
 - package.json
 
-```
+```JSON
 "scripts": {
     "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
   },
@@ -149,11 +149,11 @@ rollupOptions: {
 
 - vite.config.ts
 
-```
+```TypeScript
 export default defineConfig({
-	server: {
-		host: '0.0.0.0'
-	}
+ server: {
+  host: '0.0.0.0'
+ }
 })
 ```
 
@@ -161,7 +161,7 @@ export default defineConfig({
 
 - public/app.json
 
-```
+```JSON
 {
   "msg": "Hello Vue 3 + TypeScript + Vite + Less + ESLint + SFC"
 }
@@ -169,7 +169,7 @@ export default defineConfig({
 
 - src/App.vue
 
-```
+```Vue
 <script setup lang="ts">
 import json from '../public/app.json';
 </script>
